@@ -5,8 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicPlayer"
         mc:Ignorable="d"
-        Title="Music Player" Height="450" Width="800">
+        Title="Music Player" Height="450" Width="800" Background="#FF525252">
+    
     <Grid>
+        <TabControl Grid.ColumnSpan="2">
+            <TabItem Header="Converter" BorderBrush="#FF5D5D5D">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF5D5D5D" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FF5D5D5D">
+                    <TextBox x:Name="LinkText" HorizontalAlignment="Left" Margin="120,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="524" Height="28" RenderTransformOrigin="0.5,0.5">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.008"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                    <Button x:Name="ConvertBtn" Content="Convert to MP4" HorizontalAlignment="Left" Margin="85,348,0,0" VerticalAlignment="Top" Width="96">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button x:Name="ConvertBtn2" Content="Convert to MP3" HorizontalAlignment="Left" Margin="636,348,0,0" VerticalAlignment="Top" Width="95">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <TextBlock x:Name="InfoText" HorizontalAlignment="Left" Margin="208,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontWeight="Bold" FontSize="16" FontFamily="Bahnschrift SemiBold" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0"/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform><Run Language="en-gb" Text="&#x9;"/><Run Text="🢃"/><Run Text=" "/><Run Text="Youtube link goes here 🢃"/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Library" BorderBrush="#FF5D5D5D">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF5D5D5D" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="Gray">
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
 
     </Grid>
 </Window>

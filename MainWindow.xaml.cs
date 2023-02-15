@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,17 +13,38 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VideoLibrary;
+using MediaToolkit;
+
+
 
 namespace MusicPlayer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
+
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ConvertBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string videoLink;
+
+                
+        }
+
+        void SaveToDisk(string Link, string videoName)
+        {
+            var yt = YouTube.Default;
+            var vid = yt.GetVideo(Link);
+            File.WriteAllBytes(@"C:\" + videoName, vid.GetBytes());
         }
     }
 }
