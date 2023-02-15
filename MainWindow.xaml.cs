@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VideoLibrary;
+using MediaToolkit;
 
 
 
@@ -33,7 +35,16 @@ namespace MusicPlayer
 
         private void ConvertBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            string videoLink;
+
+                
+        }
+
+        void SaveToDisk(string Link, string videoName)
+        {
+            var yt = YouTube.Default;
+            var vid = yt.GetVideo(Link);
+            File.WriteAllBytes(@"C:\" + videoName, vid.GetBytes());
         }
     }
 }

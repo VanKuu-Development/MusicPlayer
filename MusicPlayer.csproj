@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediaToolkit" Version="1.1.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="SharpGrabber" Version="2.1.0" />
     <PackageReference Include="SharpGrabber.Adult" Version="1.0.2" />
@@ -16,6 +17,7 @@
     <PackageReference Include="SharpGrabber.Instagram" Version="0.1.0" />
     <PackageReference Include="SharpGrabber.Vimeo" Version="1.0.0" />
     <PackageReference Include="SharpGrabber.YouTube" Version="1.5.0" />
+    <PackageReference Include="VideoLibrary" Version="3.2.3" />
   </ItemGroup>
 
 </Project>
