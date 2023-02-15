@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MusicPlayer"
         mc:Ignorable="d"
         Title="Music Player" Height="450" Width="800" Background="#FF525252">
-    
+
     <Grid>
         <TabControl Grid.ColumnSpan="2">
             <TabItem Header="Converter" BorderBrush="#FF5D5D5D">
@@ -27,14 +27,14 @@
                             </TransformGroup>
                         </TextBox.RenderTransform>
                     </TextBox>
-                    <Button x:Name="ConvertBtn" Content="Convert to MP4" HorizontalAlignment="Left" Margin="85,348,0,0" VerticalAlignment="Top" Width="96">
+                    <Button x:Name="Mp4Btn" Content="Convert to MP4" HorizontalAlignment="Left" Margin="85,348,0,0" VerticalAlignment="Top" Width="96" Click="Mp4Btn_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5"/>
                             </Style>
                         </Button.Resources>
                     </Button>
-                    <Button x:Name="ConvertBtn2" Content="Convert to MP3" HorizontalAlignment="Left" Margin="636,348,0,0" VerticalAlignment="Top" Width="95">
+                    <Button x:Name="Mp3Btn" Content="Convert to MP3" HorizontalAlignment="Left" Margin="636,348,0,0" VerticalAlignment="Top" Width="95" Click="Mp3Btn_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5"/>
@@ -50,6 +50,7 @@
                                 <TranslateTransform X="0"/>
                             </TransformGroup>
                         </TextBlock.RenderTransform><Run Language="en-gb" Text="&#x9;"/><Run Text="🢃"/><Run Text=" "/><Run Text="Youtube link goes here 🢃"/></TextBlock>
+                    <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="37" Margin="233,166,0,0" VerticalAlignment="Top" Width="274"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Library" BorderBrush="#FF5D5D5D">
