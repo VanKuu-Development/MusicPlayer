@@ -17,12 +17,7 @@
                     </LinearGradientBrush>
                 </TabItem.Background>
                 <Grid Background="#FF5D5D5D">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="41*"/>
-                        <ColumnDefinition Width="6*"/>
-                        <ColumnDefinition Width="350*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBox x:Name="LinkText" HorizontalAlignment="Left" Margin="26,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="524" Height="28" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+                    <TextBox x:Name="LinkText" HorizontalAlignment="Left" Margin="113,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="524" Height="28" RenderTransformOrigin="0.5,0.5">
                         <TextBox.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -32,7 +27,7 @@
                             </TransformGroup>
                         </TextBox.RenderTransform>
                     </TextBox>
-                    <Button x:Name="Mp4Btn" Content="Convert to MP4" HorizontalAlignment="Left" Margin="85,348,0,0" VerticalAlignment="Top" Width="96" Click="Mp4Btn_Click">
+                    <Button x:Name="Mp4Btn" Content="Convert to MP4" HorizontalAlignment="Left" Margin="100,358,0,0" VerticalAlignment="Top" Width="96" Click="Mp4Btn_Click" Background="#FFBBBBBB" Visibility="Visible" Foreground="#FF191919" Grid.Column="2">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5"/>
@@ -46,7 +41,7 @@
                             </Style>
                         </Button.Resources>
                     </Button>
-                    <TextBlock x:Name="InfoText" HorizontalAlignment="Left" Margin="114,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontWeight="Bold" FontSize="16" FontFamily="Bahnschrift SemiBold" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+                    <TextBlock x:Name="InfoText" HorizontalAlignment="Left" Margin="171,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" FontWeight="Bold" FontSize="16" FontFamily="Bahnschrift SemiBold" RenderTransformOrigin="0.5,0.5">
                         <TextBlock.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -55,7 +50,7 @@
                                 <TranslateTransform X="0"/>
                             </TransformGroup>
                         </TextBlock.RenderTransform><Run Language="en-gb" Text="&#x9;"/><Run Text="🢃"/><Run Text=" "/><Run Text="Youtube link goes here 🢃"/></TextBlock>
-                    <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="37" Margin="233,166,0,0" VerticalAlignment="Top" Width="274"/>
+                    <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="37" Margin="228,157,0,0" VerticalAlignment="Top" Width="274"/>
                 </Grid>
             </TabItem>
             <TabItem Header="MP3 Librabry" BorderBrush="#FF5D5D5D">
